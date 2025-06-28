@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Fantástica Oficial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating background elements -->
+    <div class="floating-elements">
+        <div class="floating-element" style="width: 100px; height: 100px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-element" style="width: 150px; height: 150px; top: 60%; left: 80%; animation-delay: 2s;"></div>
+        <div class="floating-element" style="width: 80px; height: 80px; top: 30%; left: 50%; animation-delay: 4s;"></div>
+        <div class="floating-element" style="width: 120px; height: 120px; top: 70%; left: 30%; animation-delay: 6s;"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/Fantástica oficial.png" alt="Fantástica Oficial Logo">
+                </a>
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html#home">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="favoritos.html" id="favoritos-link"><i class="fas fa-heart"></i> Favoritos <span id="favoritos-count">0</span></a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/fantastica.oficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/56979361659" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="section-title">
+            <h2>Todos Nuestros Productos</h2>
+            <p>Descubre nuestra colección completa de prendas únicas y elegantes</p>
+        </div>
+        
+        <!-- Filtros -->
+        <div class="products-filters">
+            <div class="filter-container">
+                <div class="filter-dropdown">
+                    <label for="status-filter">Filtrar por Estado:</label>
+                    <select id="status-filter" class="filter-select">
+                        <option value="all">Todos los estados</option>
+                        <option value="nuevo">Nuevos</option>
+                        <option value="oferta">Ofertas</option>
+                        <option value="mas-vendido">Más Vendidos</option>
+                    </select>
+                </div>
+                
+                <div class="filter-dropdown">
+                    <label for="category-filter">Filtrar por Categoría:</label>
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">Todas las categorías</option>
+                        <option value="vestidos">Vestidos</option>
+                        <option value="tops">Tops</option>
+                        <option value="pantalones">Pantalones</option>
+                        <option value="conjuntos">Conjuntos</option>
+                        <option value="abrigos">Abrigos</option>
+                    </select>
+                </div>
+                
+                <button class="clear-filters-btn" id="clear-filters">
+                    <i class="fas fa-times"></i>
+                    Limpiar Filtros
+                </button>
+            </div>
+        </div>
+
+        <!-- Grid de Productos -->
+        <div id="products-grid" class="products-grid">
+            <!-- Los productos se cargarán dinámicamente aquí -->
+        </div>
+
+        <!-- Paginación -->
+        <div class="pagination-container">
+            <div class="pagination-info">
+                <span id="pagination-info">Mostrando 1-18 de 26 productos</span>
+            </div>
+            <div class="pagination-controls">
+                <button class="pagination-btn" id="prev-page" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                    Anterior
+                </button>
+                <div class="pagination-numbers" id="pagination-numbers">
+                    <!-- Los números de página se generarán dinámicamente -->
+                </div>
+                <button class="pagination-btn" id="next-page">
+                    Siguiente
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Fantástica Oficial</h3>
+                <p>Tienda de ropa femenina con las últimas tendencias y diseños exclusivos. Envíos a todo Chile.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/fantastica.oficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html#home">Inicio</a></li>
+                    <li><a href="index.html#about">Nosotras</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="index.html#testimonials">Testimonios</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Información</h3>
+                <ul class="footer-links">
+                    <li><a href="politicas-envio.html">Políticas de envío</a></li>
+                    <li><a href="cambios-devoluciones.html">Cambios y devoluciones</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+                    <li><a href="terminos-condiciones.html">Términos y condiciones</a></li>
+                    <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Fantástica Oficial. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/56979361659" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal de Detalles del Producto -->
+    <div id="product-modal" class="product-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="product-details">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img id="modal-product-image" src="" alt="">
+                            <div class="image-counter" id="image-counter" style="display: none;">
+                                <span id="current-image">1</span> / <span id="total-images">1</span>
+                            </div>
+                            <button class="image-nav prev" id="prev-image" style="display: none;">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="image-nav next" id="next-image" style="display: none;">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="image-thumbnails" id="image-thumbnails">
+                            <!-- Miniaturas se cargarán dinámicamente -->
+                        </div>
+                    </div>
+                    <div class="product-info-details">
+                        <div class="product-header">
+                            <span class="product-badge" id="modal-product-badge"></span>
+                            <h2 id="modal-product-name"></h2>
+                            <p id="modal-product-description"></p>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <div class="price-container">
+                                <span class="old-price" id="modal-old-price"></span>
+                                <span class="price" id="modal-price"></span>
+                            </div>
+                            <button class="add-to-favorites-modal" id="modal-favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-options">
+                            <div class="option-group">
+                                <label>Talla:</label>
+                                <div class="size-options" id="modal-size-options">
+                                    <!-- Opciones de talla se cargarán dinámicamente -->
+                                </div>
+                            </div>
+                            
+                            <div class="option-group">
+                                <label>Color:</label>
+                                <div class="color-options" id="modal-color-options">
+                                    <!-- Opciones de color se cargarán dinámicamente -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-actions">
+                            <div class="action-buttons">
+                                <button class="btn btn-primary" id="add-to-favorites-modal-btn">
+                                    <i class="far fa-heart"></i>
+                                    Agregar a Favoritos
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-details-info">
+                            <div class="detail-item">
+                                <strong>Stock disponible:</strong>
+                                <span id="modal-stock"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Categoría:</strong>
+                                <span id="modal-category"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>SKU:</strong>
+                                <span id="modal-sku"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="favoritos.js"></script>
+    <script src="productos-loader.js"></script>
+    <script src="product-modal.js"></script>
+    <script src="productos.js"></script>
+    <script src="contact-form.js"></script>
+</body>
+</html> 
